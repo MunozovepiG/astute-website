@@ -1,0 +1,40 @@
+
+
+$small-space:8px;
+$medium-space:16px;
+$standard-space:24px;
+$extra-standard-space:32px;
+$large-space:64px;
+$very-large-space:72px;
+
+.small-space{
+    display:flex;
+    height: $small-space;
+}
+
+.medium-space{
+    display:flex;
+    height: $medium-space;
+}
+
+.standard-space{
+    display:flex;
+    height: $standard-space;
+   
+}
+
+.extra-standard-space{
+    display:flex;
+    height: $extra-standard-space;
+}
+
+.large-space{
+    display:flex;
+    height: $large-space;
+
+}
+
+.very-large-space{
+    display:flex;
+    height: $very-large-space;
+}

@@ -1,0 +1,81 @@
+
+@use '../abstract/colors.scss' as c;
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital@0;1&family=Yeseva+One&display=swap');
+
+
+$regular: 400;
+$medium:500;
+$semi-bold:600;
+$bold: 700;
+
+
+$yes: 'Yeseva One', cursive;
+$mons:'Montserrat', sans-serif;
+$rob:'Roboto', sans-serif;
+
+
+.logo-text{
+    font-size: 24px;
+    font-weight: $bold;
+    font-family: $yes;
+    color: c.$primary-blue;
+}
+
+.logo-text:hover{
+    color: c.$black;
+    font-size: 28px;
+}
+
+.heading1{
+    font-size: 25px;
+    font-weight: $bold;
+    font-family: $mons;
+}
+
+.heading2{
+    font-size: 18px;
+    font-weight: $bold;
+    font-family: $mons;
+}
+
+.body1{
+    font-size: 16px;
+    font-weight: $regular;
+    font-family: $mons;
+    line-height: 17px;
+}
+.body1-bold{
+    font-size: 16px;
+    font-weight: $bold;
+    font-family: $mons;
+}
+
+.body2{
+    font-size: 14;
+    font-weight: $regular;
+    font-family: $mons;
+}
+
+.label-font{
+    font-size: 14;
+    font-weight: $medium;
+    font-family: $mons;
+}
+
+
+.button-text{
+    font-size: 14;
+    font-weight: $medium;
+    font-family: $rob;
+
+}
+
+.black-font{
+    color: c.$black;
+}
+
+.blue-font{
+    color: c.$primary-blue;
+}
