@@ -1,0 +1,129 @@
+@use '../../../../styles/general/index.scss' as g;
+
+.navbar-Container{
+    width: 100%;
+    background-color: g.$neutral;
+    margin: 0px;
+    top:0px;
+    display: flex;
+    height: 56px;
+    justify-content: center;
+}
+
+
+.navbar-Container--content{
+    display: flex;
+    flex-direction: row;
+    width: g.$desktop-content;
+    justify-content: space-between;
+
+}
+
+
+.logo-container{
+    width: g.$desktop-sidebar;
+    display: flex;
+    align-items: center;
+}
+
+.links-container{
+   width:854px;
+   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-effect:hover{
+    font-size: 22.5px;
+    color: black;
+}
+
+.links-container-content{
+    width:402px;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+ }
+
+ .hover-effect:hover{
+    color:g.$primary-blue
+ }
+ 
+ @media (max-width: g.$laptop) {
+
+.logo-container{
+width: g.$laptop-sidebar;
+}
+
+.links-container{
+    width: g.$laptop-article-section;
+   
+}
+    
+ }
+ 
+
+ @media (max-width: g.$tablet) {
+    .logo-container{
+        width: g.$tablet-sidebar;
+        }
+        
+        .links-container{
+            width: g.$tablet-article-section;
+        }
+        
+        .links-container-content{
+            display: none;
+            
+        }
+    
+ }
+
+
+ @media (max-width: g.$mobile) {
+    .logo-container{
+        width: auto;
+        margin-left: 24px;
+        }
+        
+        .links-container{
+            width: 133px;
+            height: 183px;
+            display: flex;
+            background-color: red;
+            z-index: 1;
+            margin-right: 24px;
+            margin-top: 16px;
+        }
+        
+        .links-container-content{
+            display: none;
+            
+        }
+
+    
+ }
+
+ @media (max-width: g.$small-mobile) {
+    .logo-container{
+        width: auto;
+        margin-left: 16px;
+        }
+        
+        .links-container{
+            width: 133px;
+            height: 183px;
+            display: flex;
+            background-color: red;
+            z-index: 1;
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+        
+        .links-container-content{
+            display: none;
+            
+        }
+
+}

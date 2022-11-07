@@ -1,5 +1,5 @@
 
-@use '../abstract/colors.scss' as c;
+@use '../../styles/general/colors.scss' as c;
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital@0;1&family=Yeseva+One&display=swap');
@@ -50,6 +50,7 @@ $rob:'Roboto', sans-serif;
     font-size: 16px;
     font-weight: $bold;
     font-family: $mons;
+    
 }
 
 .body2{
