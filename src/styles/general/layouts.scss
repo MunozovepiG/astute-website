@@ -37,10 +37,12 @@ $tablet-article-section: 330px;
 
 .page-content{
     width:$desktop-content;
-
+    margin-top: (50px) + (72px);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+
 }
 
 .page-section{

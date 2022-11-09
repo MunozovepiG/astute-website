@@ -7,6 +7,7 @@ import { TopMenuComponent } from './components/navigation/top-menu/top-menu.comp
 import { SideBarComponent } from './components/navigation/side-bar/side-bar.component';
 import { LogoComponent } from './typography/logo/logo.component';
 import { Body1BoldComponent } from './typography/body1-bold/body1-bold.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Body1BoldComponent } from './typography/body1-bold/body1-bold.component
     TopMenuComponent,
     SideBarComponent,
     LogoComponent,
-    Body1BoldComponent
+    Body1BoldComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
