@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
+closeMenu = false;
+openMenu = true;
+
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  hamburgerMenu(){
+    this.closeMenu =! this.closeMenu
+    this.openMenu =! this.openMenu
   }
 
 }

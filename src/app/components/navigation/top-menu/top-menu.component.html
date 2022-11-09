@@ -1,10 +1,12 @@
 <div class="navbar-Container">
     <div class="navbar-Container--content">
         <div class="logo-container">
+
             <a  class='logo-effect' routerLink="" routerLinkActive=""> <app-logo [text]="'astute'"></app-logo> </a>
           
         </div>
-        <div class="links-container">
+        <div 
+        class="links-container">
             <div class="links-container-content">
                 <a  class='hover-effect' routerLink="/make" routerLinkActive="'blue-font'"> <app-body1-bold [text]="'make'" [color]="'black-font'"></app-body1-bold></a>
                 <a class='hover-effect'  routerLink="/keep" routerLinkActive="'blue-font'">  <app-body1-bold [text]="'keep'" [color]="'black-font'"></app-body1-bold></a>
@@ -12,6 +14,32 @@
                 <a  class='hover-effect'  routerLink="/your-money" routerLinkActive="'blue-font'">  <app-body1-bold [text]="'your money'" [color]="'black-font'"></app-body1-bold></a>
             </div>
         </div>
+
+        <div *ngIf="closeMenu" class="hamburger-container">
+
+            <span class="button-Row">
+                <button (click)="hamburgerMenu()">
+                    <img src="../../../../assets/icons/close-icon.svg" alt="" class="icons">
+                </button>
+            </span>
+         
+
+            <a  class='hover-effect hambruger-link--padding' routerLink="/make" routerLinkActive="'blue-font'"> <app-body1-bold [text]="'make'" [color]="'black-font'"></app-body1-bold></a>
+            <a class='hover-effect hambruger-link--padding'  routerLink="/keep" routerLinkActive="'blue-font'">  <app-body1-bold [text]="'keep'" [color]="'black-font'"></app-body1-bold></a>
+            <a class='hover-effect hambruger-link--padding'  routerLink="/grow" routerLinkActive="'blue-font'"><app-body1-bold [text]="'grow'" [color]="'black-font'"></app-body1-bold></a>
+            <a  class='hover-effect hambruger-link--padding'  routerLink="/your-money" routerLinkActive="'blue-font'">  <app-body1-bold [text]="'your money'" [color]="'black-font'"></app-body1-bold></a>
+        </div>
+        <div *ngIf="openMenu" class="hamburger-container--close">
+
+            <span class="button-Row">
+                <button (click)="hamburgerMenu()">
+                   <img src="../../../../assets/icons/hamburge-icons.svg" alt="" class="icons">
+                </button>
+            </span>
+       
+        </div>
+
+
     </div>
 
 </div>
