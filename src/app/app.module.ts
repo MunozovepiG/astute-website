@@ -8,6 +8,13 @@ import { SideBarComponent } from './components/navigation/side-bar/side-bar.comp
 import { LogoComponent } from './typography/logo/logo.component';
 import { Body1BoldComponent } from './typography/body1-bold/body1-bold.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AboutLinksSectionComponent } from './components/about-links-section/about-links-section.component';
+import { H1Component } from './typography/h1/h1.component';
+import { Body1RegularComponent } from './typography/body1-regular/body1-regular.component';
+import { Body2RegularComponent } from './typography/body2-regular/body2-regular.component';
+import { Body2BoldComponent } from './typography/body2-bold/body2-bold.component';
+import { Subheading1Component } from './typography/subheading1/subheading1.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +23,14 @@ import { HomeComponent } from './pages/home/home.component';
     SideBarComponent,
     LogoComponent,
     Body1BoldComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    AboutLinksSectionComponent,
+    H1Component,
+    Body1RegularComponent,
+    Body2RegularComponent,
+    Body2BoldComponent,
+    Subheading1Component
   ],
   imports: [
     BrowserModule,
