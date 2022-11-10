@@ -2,16 +2,21 @@
 *ngIf="blogPosts$ | async as blogPosts"
 >
 
-<span *ngFor="let blogPost of blogPosts.items" >
-<h2
+<span 
+style="display:flex; flex-direction: column;"
+*ngFor="let blogPost of blogPosts.items" >
 
-*ngIf="blogPost.fields.entryType == 'Blog'"
->{{ blogPost.fields.postTitle }}</h2>
+<span *ngIf="blogPost.fields.entryType == 'Blog'">
+    <app-h1 
+    [text]=blogPost.fields.postTitle
+    ></app-h1>
+    
+    <a
+    [routerLink]="['blog', blogPost.sys.id, blogPost.fields.postTitle ]"
+    
+    >Read me</a>
+</span>
 
-<a
-[routerLink]="['blog', blogPost.sys.id, blogPost.fields.postTitle ]"
-
->Read me</a>
 
 </span>
 </span>

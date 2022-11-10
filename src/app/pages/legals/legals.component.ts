@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ContentfulService } from 'src/app/services/contentful.service';
+
 
 @Component({
   selector: 'app-legals',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LegalsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contentfulService:ContentfulService) { }
+
+  blogPosts$ : Observable<any> | undefined
 
   ngOnInit(): void {
+    this.blogPosts$ = this.contentfulService.getAllEntries();
   }
 
 }

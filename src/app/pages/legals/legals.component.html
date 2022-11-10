@@ -1,1 +1,29 @@
-<p>legals works!</p>
+
+
+
+<span class=""
+*ngIf="blogPosts$ | async as blogPosts"
+>
+
+<span 
+style="display:flex; flex-direction: column;"
+*ngFor="let blogPost of blogPosts.items" >
+
+<span *ngIf="blogPost.fields.entryType == 'Legal'">
+    <span class="temp">
+        <app-h1 
+        [text]=blogPost.fields.postTitle
+        ></app-h1>
+
+        <app-h1 
+        [text]=blogPost.fields.entryType
+        ></app-h1>
+    </span>
+   
+   
+  
+</span>
+
+
+</span>
+</span>
