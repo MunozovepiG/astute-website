@@ -24,6 +24,9 @@ import { LegalsComponent } from './pages/legals/legals.component';
 import { KeepComponent } from './pages/keep/keep.component';
 import { GrowComponent } from './pages/grow/grow.component';
 import { Body3RegularComponent } from './typography/body3-regular/body3-regular.component';
+import { BlogpostsSectionComponent } from './components/blogposts-section/blogposts-section.component';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { Body3RegularComponent } from './typography/body3-regular/body3-regular.
     LegalsComponent,
     KeepComponent,
     GrowComponent,
-    Body3RegularComponent
+    Body3RegularComponent,
+    BlogpostsSectionComponent,
+    BlogPostComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

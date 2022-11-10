@@ -1,0 +1,17 @@
+<span class=""
+*ngIf="blogPosts$ | async as blogPosts"
+>
+
+<span *ngFor="let blogPost of blogPosts.items" >
+<h2
+
+*ngIf="blogPost.fields.entryType == 'Blog'"
+>{{ blogPost.fields.postTitle }}</h2>
+
+<a
+[routerLink]="['blog', blogPost.sys.id, blogPost.fields.postTitle ]"
+
+>Read me</a>
+
+</span>
+</span>

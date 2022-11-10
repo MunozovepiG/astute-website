@@ -1,0 +1,19 @@
+<div
+style="margin-top: 100px;"
+>
+ <app-back-button></app-back-button></div>
+
+ <span
+ *ngIf="blogPost$ | async as blogPost"
+ >
+
+ <span class="heading1">
+    {{blogPost.fields.postTitle}}
+</span>
+
+ <span class="category">
+    {{blogPost.fields.category}}
+</span>
+
+
+ </span>
