@@ -1,4 +1,10 @@
+@use '../../../styles/general/index.scss' as c;
+
 .margin-right{
     margin-right: 8px;
 }
 
+
+.blue-font{
+    color: c.$primary-blue;
+}

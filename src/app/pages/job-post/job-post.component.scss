@@ -1,0 +1,8 @@
+@use "../../../styles/general/index" as g;
+
+.button-rightAligned{
+    display: flex;
+    width: g.$desktop-single-post;
+    justify-content: flex-end;
+  margin-bottom: 72px;
+}
