@@ -27,6 +27,9 @@ import { Body3RegularComponent } from './typography/body3-regular/body3-regular.
 import { BlogpostsSectionComponent } from './components/blogposts-section/blogposts-section.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { H2Component } from './typography/h2/h2.component';
+import { JobPostComponent } from './pages/job-post/job-post.component';
+import { RoundButtonDefaultComponent } from './components/round-button-default/round-button-default.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
     Body3RegularComponent,
     BlogpostsSectionComponent,
     BlogPostComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    H2Component,
+    JobPostComponent,
+    RoundButtonDefaultComponent
   ],
   imports: [
     BrowserModule,

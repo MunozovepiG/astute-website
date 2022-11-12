@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ContentfulService } from 'src/app/services/contentful.service';
 
 @Component({
   selector: 'app-founder-updates',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FounderUpdatesComponent implements OnInit {
 
-  constructor() { }
+  blogPosts$ : Observable<any> | undefined
+
+  constructor(private contentfulService:ContentfulService) { }
 
   ngOnInit(): void {
+    this.blogPosts$ = this.contentfulService.getAllEntries();
   }
 
 }

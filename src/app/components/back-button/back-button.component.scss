@@ -1,0 +1,13 @@
+
+@use '../../../styles/general/index.scss' as g;
+
+button{
+    border: none;
+    background-color: white
+}
+
+.button-Row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

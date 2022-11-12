@@ -1,1 +1,95 @@
-<p>careers works!</p>
+
+<div class="page-layout">
+    <div class="page-content">
+        <div class="desktop-sidebar">
+           <app-sidebar></app-sidebar>
+        </div>
+
+        <div class="page-section">
+            <span class="column">
+
+
+                <app-back-button></app-back-button>
+                <span class="small-space"></span>
+
+                
+
+                <span>
+                    <app-h1 [text]="'Opportunities at astute'">
+                  
+                    </app-h1>
+
+                </span>
+
+
+                <span class=""
+                *ngIf="blogPosts$ | async as blogPosts"
+                >
+                      <span class="extra-standard-space"></span>
+                <span 
+                style="display:flex; flex-direction: column;"
+                *ngFor="let blogPost of blogPosts.items" >
+                
+                <span *ngIf="blogPost.fields.entryType == 'Job'" class="cms-content">
+
+                    <span class="job-card">
+                        <app-h2 
+                        [text]=blogPost.fields.postTitle
+                        ></app-h2>
+        
+                    
+                        <span class="small-space"></span>
+        
+                        <app-body2-bold
+                        [text]="blogPost.fields.jobSalary"
+                        ></app-body2-bold>
+    
+    
+                        <span class="small-space"></span>
+    
+                        <app-body3-regular
+                        [text]="blogPost.fields.publishedOn"
+                        ></app-body3-regular>
+    
+                        <span class="medium-space"></span>
+    
+                        <app-body1-regular
+                        [text]="blogPost.fields.jobSummary"
+                        >
+                  
+    
+                        </app-body1-regular>
+
+                        <span class="small-space"></span>
+    
+                        <a   [routerLink]="(['/careers', blogPost.sys.id, blogPost.fields.postTitle ])">
+                            <span class="card-Row">
+                                <span class="card-button">
+                                    <app-bt-m
+                                    [color]="'green-font'"
+                                    [text]="'I am interested'"
+                                    >
+    
+                                   
+    
+                                    </app-bt-m>
+    
+                                    <img src="../../../assets/icons/circle-arrow.png" alt=""
+                                    class="icon icon-spacing"
+                                    >
+                                </span>
+           
+                            </span>
+                        </a>
+                    </span>
+             
+                  
+                </span>
+                
+                
+                </span>
+                </span>
+            </span>
+       
+        </div>
+    </div>

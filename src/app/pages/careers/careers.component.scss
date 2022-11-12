@@ -1,0 +1,87 @@
+@use '../../../styles/general/index.scss' as g;
+
+
+.job-card{
+    display: flex;
+    flex-direction: column;
+    width:844px;
+    height: 162px;
+    border-bottom: 1px black solid;
+    margin-bottom: g.$standard-space;
+  
+
+}
+
+.card-Row{
+    width: 100%;
+    display: flex;
+justify-content: flex-end;
+}
+
+.card-button{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px; 
+}
+
+.icon-spacing{
+    margin-left: 8px;
+}
+
+@media (max-width: g.$laptop) {
+
+   
+    
+    
+}
+
+@media (max-width: g.$tablet) {
+    .job-card{
+        display: flex;
+        flex-direction: column;
+        width:330px;
+        height: 196px;
+        border-bottom: 1px black solid;
+        margin-bottom: g.$standard-space;
+    
+    }
+
+
+.card-button{
+    margin-bottom: 0px; 
+}
+}
+
+@media (max-width: g.$mobile) {
+
+    .job-card{
+        display: flex;
+        flex-direction: column;
+        width:g.$mobile-content;
+        height: 162px;
+        border-bottom: 1px black solid;
+        margin-bottom: g.$standard-space;
+    
+    }
+
+    .card-button{
+        margin-bottom: 8px; 
+    }
+    
+}
+
+@media (max-width: g.$small-mobile) {
+    .job-card{
+        display: flex;
+        flex-direction: column;
+        width:g.$small-mobile-content;
+        height: auto;
+        border-bottom: 1px black solid;
+        margin-bottom: g.$standard-space;
+    
+    }
+
+    .card-button{
+        margin-bottom: 8px; 
+    }
+}

@@ -1,29 +1,64 @@
 
+<div class="page-layout">
+    <div class="page-content">
+        <div class="desktop-sidebar">
+           <app-sidebar></app-sidebar>
+        </div>
+
+        <div class="page-section">
+            <span class="column">
+                <app-back-button></app-back-button>
+                <span class="small-space"></span>
+
+                <span>
+                    <app-h1 [text]="'Legals and disclaimers'">
+                  
+                    </app-h1>
+
+                </span>
 
 
-<span class=""
-*ngIf="blogPosts$ | async as blogPosts"
->
-
-<span 
-style="display:flex; flex-direction: column;"
-*ngFor="let blogPost of blogPosts.items" >
-
-<span *ngIf="blogPost.fields.entryType == 'Legal'">
-    <span class="temp">
-        <app-h1 
-        [text]=blogPost.fields.postTitle
-        ></app-h1>
-
-        <app-h1 
-        [text]=blogPost.fields.entryType
-        ></app-h1>
-    </span>
-   
-   
-  
-</span>
+                <span class=""
+                *ngIf="blogPosts$ | async as blogPosts"
+                >
+                      <span class="extra-standard-space"></span>
+                <span 
+                style="display:flex; flex-direction: column;"
+                *ngFor="let blogPost of blogPosts.items" >
+                
+                <span *ngIf="blogPost.fields.entryType == 'Legal'" class="cms-content">
+                    <app-h1 
+                    [text]=blogPost.fields.postTitle
+                    ></app-h1>
+    
+                
+                    <span class="small-space"></span>
+    
+                    <app-body2-bold
+                    [text]="blogPost.fields.postAuthor"
+                    ></app-body2-bold>
 
 
-</span>
-</span>
+                    <span class="small-space"></span>
+
+                    <app-body3-regular
+                    [text]="blogPost.fields.publishedOn"
+                    ></app-body3-regular>
+
+                    <span class="medium-space"></span>
+
+                    <app-body1-regular
+                    [text]="blogPost.fields.articleContent"
+                    >
+
+                    </app-body1-regular>
+                  
+                </span>
+                
+                
+                </span>
+                </span>
+            </span>
+       
+        </div>
+    </div>

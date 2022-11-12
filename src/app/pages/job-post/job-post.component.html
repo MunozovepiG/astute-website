@@ -1,0 +1,48 @@
+
+
+
+<div
+class="post-page"
+>
+
+
+
+<span class="post-page-content">
+
+    <app-back-button></app-back-button>
+    <span class="standard-space"></span>
+
+
+    <span class="column"
+    *ngIf="blogPost$ | async as blogPost"
+    >
+   
+    <span class="heading1">
+       {{blogPost.fields.postTitle}}
+   </span>
+
+   <span class="small-space"></span>
+
+   <span >
+
+    <app-body2-bold [text]= blogPost.fields.jobSalary
+    [color]="'blue-font'"
+    ></app-body2-bold>
+   
+</span>
+
+<span class="extra-standard-space"></span>
+   
+    <span class="category">
+       {{blogPost.fields.jobDescription}}
+   </span>
+   
+   
+    </span>
+</span>
+ 
+
+
+
+</div>
+
