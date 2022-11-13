@@ -1,0 +1,93 @@
+
+@use "../../../styles/general/index.scss" as g;
+
+.article-container--Box{
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+
+}
+
+.article-container{
+    width: 350px;
+    height: 331px;
+    border-radius: 10px;
+    background-color: rgba(242, 241, 221, 0.2);
+    border:  0.5px solid #F2F1DD;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding: 22px;
+ 
+    //margin-right: 32px;
+}
+
+
+.thumbnail{
+    width: 306px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.columns-container{
+    display: flex;
+    justify-content: space-between;
+    width: g.$desktop-article-section;
+    flex-direction: row;
+ 
+}
+
+.card-button--Row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:g.$tablet) {
+    .article-container{
+        width: 350px;
+        height: 382px;
+    }
+
+    .columns-container{
+        flex-direction: column;
+    }
+
+    .columns-container{
+        display: flex;
+        justify-content: space-between;
+        width: g.$tablet-article-section;
+        flex-direction: row;
+    }
+    
+}
+
+@media (max-width:g.$mobile) {
+    .article-container{
+        width: 288px;
+        height: 220px;
+    }
+
+    .thumbnail{
+        display: none;
+    }
+
+    .columns-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:g.$small-mobile) {
+    .article-container{
+        width: 288px;
+        height: 220px;
+    }
+
+    .thumbnail{
+        display: none;
+    }
+
+    .columns-container{
+        flex-direction: column;
+    }
+}

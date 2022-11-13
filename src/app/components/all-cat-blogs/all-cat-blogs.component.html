@@ -1,4 +1,4 @@
- <span class="columns-container">
+<span class="columns-container">
 
 
 
@@ -9,7 +9,7 @@
         style="display:flex; flex-direction: column;" *ngFor="let blogPost of blogPosts.items">
     
             <span
-                *ngIf="(blogPost.fields.entryType == 'Blog') && (blogPost.fields.blogNumber < 3) && (blogPost.fields.category == cat1 || blogPost.fields.category == cat2 || blogPost.fields.category== cat3 || blogPost.fields.category == cat4 ) ">
+                *ngIf="(blogPost.fields.entryType == 'Blog') && (blogPost.fields.catNumber < 3) && (blogPost.fields.category == cat1 || blogPost.fields.category == cat2 || blogPost.fields.category== cat3 || blogPost.fields.category == cat4 ) ">
                 
           
                 <span class="article-container">
@@ -59,7 +59,7 @@
     style="display:flex; flex-direction: column;" *ngFor="let blogPost of blogPosts.items">
 
         <span
-            *ngIf="(blogPost.fields.entryType == 'Blog') && (blogPost.fields.blogNumber  > 2) && (blogPost.fields.blogNumber < 5 ) && (blogPost.fields.category == cat1 || blogPost.fields.category == cat2 || blogPost.fields.category== cat3 || blogPost.fields.category == cat4 ) ">
+            *ngIf="(blogPost.fields.entryType == 'Blog') && (blogPost.fields.catNumber  > 2) && (blogPost.fields.catNumber < 5 ) && (blogPost.fields.category == cat1 || blogPost.fields.category == cat2 || blogPost.fields.category== cat3 || blogPost.fields.category == cat4 ) ">
             
       
             <span class="article-container">

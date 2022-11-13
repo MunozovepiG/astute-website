@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +7,6 @@ import { TopMenuComponent } from './components/navigation/top-menu/top-menu.comp
 import { LogoComponent } from './typography/logo/logo.component';
 import { Body1BoldComponent } from './typography/body1-bold/body1-bold.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AboutLinksSectionComponent } from './components/about-links-section/about-links-section.component';
 import { H1Component } from './typography/h1/h1.component';
 import { Body1RegularComponent } from './typography/body1-regular/body1-regular.component';
@@ -31,6 +30,9 @@ import { H2Component } from './typography/h2/h2.component';
 import { JobPostComponent } from './pages/job-post/job-post.component';
 import { RoundButtonDefaultComponent } from './components/round-button-default/round-button-default.component';
 import { YourMoneyComponent } from './page/your-money/your-money.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AllCatBlogsComponent } from './components/all-cat-blogs/all-cat-blogs.component';
+import { MakePageComponent } from './components/make-page/make-page.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,6 @@ import { YourMoneyComponent } from './page/your-money/your-money.component';
     LogoComponent,
     Body1BoldComponent,
     HomeComponent,
-    SidebarComponent,
     AboutLinksSectionComponent,
     H1Component,
     Body1RegularComponent,
@@ -62,8 +63,15 @@ import { YourMoneyComponent } from './page/your-money/your-money.component';
     H2Component,
     JobPostComponent,
     RoundButtonDefaultComponent,
-    YourMoneyComponent
+    YourMoneyComponent,
+    SidebarComponent,
+    BlogPostComponent,
+    AllCatBlogsComponent,
+    MakePageComponent,
+
   ],
+
+  schemas: [NO_ERRORS_SCHEMA ],
   imports: [
     BrowserModule,
     AppRoutingModule

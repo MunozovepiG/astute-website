@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MakeComponent } from './make.component';
+import { MakePageComponent } from './make-page.component';
 
-describe('MakeComponent', () => {
-  let component: MakeComponent;
-  let fixture: ComponentFixture<MakeComponent>;
+describe('MakePageComponent', () => {
+  let component: MakePageComponent;
+  let fixture: ComponentFixture<MakePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MakeComponent ]
+      declarations: [ MakePageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MakeComponent);
+    fixture = TestBed.createComponent(MakePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
