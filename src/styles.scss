@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'styles/general/index.scss';
+@use 'styles/general/index.scss' as *;
 
 body{
     margin: 0px;
     padding: 0px;
 }
 
-p{margin: 0px;}
+p{margin-bottom: 24px;}
 
 a{
     text-decoration: none;
@@ -18,5 +18,12 @@ button{
 }
 
 h1{
-    color:red;
+   
+}
+
+.content{
+    font-size: 16px;
+    font-weight: $regular;
+    font-family: $mons;
+    line-height: 19.5px
 }
