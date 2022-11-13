@@ -30,6 +30,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { H2Component } from './typography/h2/h2.component';
 import { JobPostComponent } from './pages/job-post/job-post.component';
 import { RoundButtonDefaultComponent } from './components/round-button-default/round-button-default.component';
+import { YourMoneyComponent } from './page/your-money/your-money.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { RoundButtonDefaultComponent } from './components/round-button-default/r
     BackButtonComponent,
     H2Component,
     JobPostComponent,
-    RoundButtonDefaultComponent
+    RoundButtonDefaultComponent,
+    YourMoneyComponent
   ],
   imports: [
     BrowserModule,

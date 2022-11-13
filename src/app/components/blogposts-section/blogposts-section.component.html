@@ -1,22 +1,108 @@
-<span class=""
-*ngIf="blogPosts$ | async as blogPosts"
->
+ <span class="columns-container">
 
-<span 
-style="display:flex; flex-direction: column;"
-*ngFor="let blogPost of blogPosts.items" >
 
-<span *ngIf="blogPost.fields.entryType == 'Blog'">
-    <app-h1 
-    [text]=blogPost.fields.postTitle
-    ></app-h1>
+
+    <span      class="article-container--Box" *ngIf="blogPosts$ | async as blogPosts">
+
+        <span 
+ 
+        style="display:flex; flex-direction: column;" *ngFor="let blogPost of blogPosts.items">
     
-    <a
-    [routerLink]="['blog', blogPost.sys.id, blogPost.fields.postTitle ]"
+            <span
+                *ngIf="(blogPost.fields.entryType == 'Blog') && (blogPost.fields.blogNumber < 3) && (blogPost.fields.category == cat1 || blogPost.fields.category == cat2 || blogPost.fields.category== cat3 || blogPost.fields.category == cat4 ) ">
+                
+          
+                <span class="article-container">
+                  
+                    <img [src]="blogPost.fields.articleThumbnail.fields.file.url" alt="" class="thumbnail">
+                  
+             
+                    <span class="medium-space"></span>
+      
+                    <app-body2-regular [text]=blogPost.fields.category [color]="'blue-font'"></app-body2-regular>
+                    <span class="medium-space"></span>
+                    <app-h1 [text]=blogPost.fields.postTitle></app-h1>
+      
+                    <span class="medium-space"></span>
+      
+                
+                    <app-body1-regular [text]=blogPost.fields.articleSummary>
+      
+                    </app-body1-regular>
+      
+                    <span class="medium-space"></span>
+      
+                    <a [routerLink]="['blog', blogPost.sys.id, blogPost.fields.postTitle ]">
+                        <span class="card-button--Row">
+                            <app-bt-m
+                            [color]="'green-font'"
+                            [text]="'Read more'"
+                            ></app-bt-m>
+
+                            <img src="../../../assets/icons/rounded-arrow-icon.png" alt="" class="menu-icon">
+                        </span>
+                     
+                    </a>
     
-    >Read me</a>
+            </span>
+    
+    
+        </span>
+    </span>
 </span>
 
 
+<span      class="article-container--Box" *ngIf="blogPosts$ | async as blogPosts">
+
+    <span 
+
+    style="display:flex; flex-direction: column;" *ngFor="let blogPost of blogPosts.items">
+
+        <span
+            *ngIf="(blogPost.fields.entryType == 'Blog') && (blogPost.fields.blogNumber < 3) ">
+            
+      
+            <span class="article-container">
+              
+                <img [src]="blogPost.fields.articleThumbnail.fields.file.url" alt="" class="thumbnail">
+              
+         
+                <span class="medium-space"></span>
+  
+                <app-body2-regular [text]=blogPost.fields.category [color]="'blue-font'"></app-body2-regular>
+                <span class="medium-space"></span>
+                <app-h1 [text]=blogPost.fields.postTitle></app-h1>
+  
+                <span class="medium-space"></span>
+  
+            
+                <app-body1-regular [text]=blogPost.fields.articleSummary>
+  
+                </app-body1-regular>
+  
+                <span class="medium-space"></span>
+  
+                <a [routerLink]="['blog', blogPost.sys.id, blogPost.fields.postTitle ]">
+                    <span class="card-button--Row">
+                        <app-bt-m
+                        [color]="'green-font'"
+                        [text]="'Read more'"
+                        ></app-bt-m>
+
+                        <img src="../../../assets/icons/rounded-arrow-icon.png" alt="" class="menu-icon">
+                    </span>
+                </a>
+
+        </span>
+
+
+    </span>
 </span>
 </span>
+ </span>
+ 
+
+
+
+    
+
