@@ -33,6 +33,9 @@ import { YourMoneyComponent } from './page/your-money/your-money.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AllCatBlogsComponent } from './components/all-cat-blogs/all-cat-blogs.component';
 import { MakePageComponent } from './components/make-page/make-page.component';
+import { FooterComponent } from './components/navigation/footer/footer.component';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -68,13 +71,30 @@ import { MakePageComponent } from './components/make-page/make-page.component';
     BlogPostComponent,
     AllCatBlogsComponent,
     MakePageComponent,
+    FooterComponent,
 
   ],
 
   schemas: [NO_ERRORS_SCHEMA ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot({
+      loader: HttpClient, // optional, only if you use [src] attribute
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          breaks: false,
+          pedantic: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    }),
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

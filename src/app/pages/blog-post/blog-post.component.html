@@ -1,19 +1,71 @@
 <div
-style="margin-top: 100px;"
+class="post-page"
 >
- <app-back-button></app-back-button></div>
 
- <span
- *ngIf="blogPost$ | async as blogPost"
- >
 
- <span class="heading1">
-    {{blogPost.fields.postTitle}}
+
+<span class="post-page-content">
+
+    <app-back-button></app-back-button>
+    <span class="standard-space"></span>
+
+
+    <span class="column"
+    *ngIf="blogPost$ | async as blogPost"
+    >
+   
+    <span class="heading1">
+       {{blogPost.fields.postTitle}}
+   </span>
+
+   <span class="small-space"></span>
+
+   <span >
+
+    <app-body1-regular [text]=  blogPost.fields.postAuthor
+    [color]="'blue-font'"
+    ></app-body1-regular>
+   
 </span>
 
- <span class="category">
-    {{blogPost.fields.category}}
+   <span class="small-space"></span>
+
+   <span >
+
+    <app-body2-bold [text]= blogPost.fields.category
+ 
+    ></app-body2-bold>
+   
 </span>
 
+<span class="small-space"></span>
 
- </span>
+<span >
+
+ <app-body2-bold [text]= blogPost.fields.publishedOn
+
+ ></app-body2-bold>
+
+</span>
+
+<span class="extra-standard-space"></span>
+   
+   <markdown ngPreserveWhitespaces>
+
+        {{blogPost.fields.articleContent}}
+
+
+  </markdown>
+   
+
+   <span class="extra-standard-space"></span>
+
+   
+  
+    </span>
+</span>
+ 
+
+
+
+</div>
